@@ -1,0 +1,38 @@
+h1{
+    text-align: center;
+    text-transform: uppercase;
+}
+
+
+body{
+    margin: 0;
+    border: 0;
+    padding: 0;
+    height: 100vh;
+    font-size: 36;
+    background-color: #FFF8F0;
+}
+.content{
+    font-family: 'Dancing Script',cursive;
+    font-size: 30px;
+    height: 200vh;
+    padding: 50px;
+    color:#5C3D2E;
+
+}
+
+h1,h2,h3{
+    font-family: 'Playfair Display',serif;
+    color: #3e2723;
+}
+
+body,p,li{
+    font-family: 'Poppins',sans-serif;
+    font-size: 18px;
+    color:#4E342E;
+}
+figure{
+    margin: 0;
+    border: 0;
+    padding: 0;
+}
