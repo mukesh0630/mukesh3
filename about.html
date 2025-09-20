@@ -1,44 +1,187 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="dev">
-    <meta name="description" content="the office website for the Chai Tales">
-    <title>Document</title>
-    <link rel="icon" href="img.png">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <figure>
-        <center><img src="img.jpg.png" width=1800 height=400 alt="chai and buiscuits" title="Brewing Stories, One Cup at a Time!"></center>
-        <figcaption>
-            <center><strong>Brewing Stories, One Cup at a Time!</strong></center>
-        </figcaption>
-    </figure>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us - Chai Tales</title>
+  <link rel="icon" href="img.png">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .navbar {
+      position: sticky;
+      top: 0;
+      background-color: #333;
+      z-index: 50;
+    }
+    .navbar a {
+      color: white;
+      padding: 14px 16px;
+      text-decoration: none;
+      text-transform: uppercase;
+      font-weight: 500;
+      transition: 0.3s;
+    }
+    .navbar a:hover {
+      background-color: #111;
+    }
+    .navbar a.active {
+      background-color: #04AA6D;
+    }
+    .faq details {
+      border: 1px solid #e0c097;
+      border-radius: 10px;
+      padding: 15px;
+      background: #fffaf3;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.08);
+      transition: all 0.3s ease-in-out;
+    }
+    .faq details:hover {
+      box-shadow: 0 4px 10px rgba(0,0,0,0.12);
+    }
+    .faq summary {
+      font-weight: bold;
+      font-size: 1.1rem;
+      color: #8b5e3c;
+      cursor: pointer;
+    }
+    .faq p {
+      margin-top: 10px;
+      color: #555;
+    }
+  </style>
 </head>
-</head>
-<body>
-    <article id="about">
-        <h2> About <abbr title="Chai Tales Restaurant">CT Cafè</abbr></h2>
-        <p>
-            <abbr title="Chai Tales Restaurant"> CT Cafè</abbr> was founded in <time datetime="2016">2016.</time>
-            Welcome to Chai Tales — where every sip tells a story.<br><br>
+<body class="bg-white text-gray-800 font-sans">
 
-Born from a love of soulful conversations and the timeless charm of chai, Chai Tales is more than just a tea spot — it’s an experience. Whether you're catching up with old friends, diving into your favorite book, or just taking a break from the chaos of the day, we’ve brewed the perfect atmosphere for you.<br><br>
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="max-w-7xl mx-auto flex justify-between items-center px-6">
+      <div class="flex items-center space-x-2 text-white font-bold text-lg py-3">
+        <img src="img.png" alt="logo" class="h-8 w-8">
+        <span>Chai Talès</span>
+      </div>
 
-From the rich aroma of masala chai to our handcrafted snacks inspired by street-side favorites, every item on our menu is steeped in tradition and served with a modern twist. Cozy corners, warm vibes, and the comforting clink of chai glasses — it’s all waiting for you here.<br><br>
+      <nav class="flex space-x-4">
+        <a href="index.html">Home</a>
+        <a href="menu.html">Menu</a>
+        <a href="about.html" class="active">About Us</a>
+        <a href="contact.html">Contact Us</a>
+      </nav>
+    </div>
+  </header>
 
-Come for the chai, stay for the tales.<br><br>
-        </p>
-        <aside>
-            <h3>chai trivia</h3>
-            <details>
-                <summary>when did chai tales appear in india?</summary>
-                <p>
-                    Chai Tales was born from India’s timeless love for tea. ☕✨<br><br>
-While tea first arrived in India through ancient trade routes and blossomed during the British era, Chai Tales brings this rich heritage to life with a modern twist. Our journey began to celebrate the soulful stories brewed in every cup, creating a space where tradition meets taste — and every sip tells a tale. 🌿❤️<br><br>
-                </p>
-            </details>
-        </aside>
-    </article>
+  <!-- Hero -->
+  <section class="relative bg-cover bg-center h-72" style="background-image: url('chai-bg.jpg');">
+    <div class="absolute inset-0 bg-black bg-opacity-40"></div>
+    <div class="relative flex flex-col items-center justify-center h-full text-white text-center">
+    <h1 class="text-4xl md:text-5xl font-bold uppercase">About Chai Tales</h1>
+    <p class="mt-4 text-lg text-gray-300">Brewing Stories, One Cup at a Time</p>
+    </div>
+  </section>
+
+  <!-- Grid Section 1 -->
+  <section class="max-w-7xl mx-auto py-16 px-6 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+    <!-- Left Images -->
+    <div class="grid grid-cols-2 gap-4 relative">
+      <div class="bg-amber-500 p-2 flex justify-center items-center">
+        <img src="images1.jpg" alt="Chai glass" class="rounded-lg shadow-lg">
+      </div>
+      <div>
+        <img src="images.jpg" alt="Pouring chai" class="rounded-lg shadow-lg">
+      </div>
+    </div>
+    <!-- Right Content -->
+    <div>
+      <h2 class="text-3xl font-bold text-gray-900 mb-6">Our Story</h2>
+      <p class="mb-6">
+        Founded in 2016, <strong>Chai Tales</strong> is more than just a café — it’s where every sip tells a story. 
+        Rooted in the rich tradition of Indian chai culture, we bring together timeless recipes and modern flavors 
+        to create a tea experience like no other. From the creamy comfort of milk chai to the boldness of black chai 
+        and the refreshing zest of herbal blends, our menu is crafted to suit every mood and moment.
+      </p>
+    </div>
+  </section>
+
+  <!-- Grid Section 2 -->
+  <section class="max-w-7xl mx-auto py-16 px-6 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+    <!-- Left Content -->
+    <div>
+      <p class="mb-6">
+        We believe chai is not just a drink — it’s a ritual of togetherness, conversations, and memories. 
+        Every cup we serve is brewed with care, using authentic methods and ingredients that preserve 
+        the essence of age-old traditions. With every sip, we aim to deliver not just flavor, but also 
+        comfort, warmth, and connection.
+      </p>
+      <p class="mb-6">
+        Our space is designed to feel like home — a place where friends can catch up, families can share moments, 
+        and strangers can become companions over steaming cups of chai. Whether you’re stopping by for a quick break, 
+        a long evening of laughter, or some quiet time to unwind, Chai Tales is the perfect setting to relax and recharge.
+      </p>
+    </div>
+    <!-- Right Image -->
+    <div>
+      <img src="download (8).jpg" alt="Kettle chai" class="rounded-lg shadow-lg">
+    </div>
+  </section>
+
+  <!-- Grid Section 3 -->
+  <section class="max-w-7xl mx-auto py-16 px-6 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+    <!-- Left Image -->
+    <div>
+      <img src="download (9).jpg" alt="Serving chai" class="rounded-lg shadow-lg">
+    </div>
+    <!-- Right Content -->
+    <div>
+      <p class="mb-6">
+        At the heart of our journey are our values — authenticity, hospitality, and sustainability. 
+        We honor the true spirit of chai while embracing creativity to introduce unique blends. 
+        We’re committed to supporting local farmers and eco-friendly practices, giving back to the 
+        community while serving you with heartfelt warmth.
+      </p>
+      <p class="mb-6 font-semibold text-gray-900">
+        More than a restaurant, Chai Tales is an experience — a place where stories are shared, bonds are strengthened, 
+        and every visit feels like a warm embrace. Step into our world, take a sip, and let us be a part of your story, 
+        one cup at a time.
+      </p>
+    </div>
+  </section>
+
+  <!-- Trivia / Summary at Bottom -->
+  <section class="faq container my-5">
+    <h1 class="mb-4">Frequently Asked Questions</h1>
+
+    <details>
+      <summary>What makes Chai Tales special?</summary>
+      <p>At Chai Tales, we combine authentic Indian chai traditions with modern flavors, creating a unique tea experience that feels both nostalgic and refreshing.</p>
+    </details>
+
+    <details class="mt-3">
+      <summary>Do you only serve chai?</summary>
+      <p>While chai is our specialty, we also serve herbal teas, light snacks, and treats that perfectly complement your cup of tea.</p>
+    </details>
+
+    <details class="mt-3">
+      <summary>Are your ingredients natural?</summary>
+      <p>Yes! We use carefully sourced tea leaves, fresh spices, and locally sourced ingredients to ensure quality, freshness, and sustainability.</p>
+    </details>
+
+    <details class="mt-3">
+      <summary>Can I work or study at Chai Tales?</summary>
+      <p>Absolutely! Our cozy space is designed for comfort, whether you’re here for conversations, work, or simply to unwind with a warm cup.</p>
+    </details>
+
+    <details class="mt-3">
+      <summary>Do you offer dairy-free or vegan options?</summary>
+      <p>Yes, we offer a variety of dairy-free and vegan alternatives, including plant-based milk options, so everyone can enjoy their favorite chai.</p>
+    </details>
+  </section>
+
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-white py-4 text-center">
+    <p>&copy; 2025 The classic Chai Talès. All Rights Reserved.</p>
+  </footer>
+
 </body>
 </html>
+
