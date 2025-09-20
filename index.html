@@ -1,148 +1,104 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="dev">
-    <meta name="description" content="the office website for the chai kings">
-    <title> The classic chai kings</title>
-    <link rel="icon" href="img.png">
-    <link rel="stylesheet" href="main.css">
-    <style>
-       ul {
-        position: sticky;
-        top: 0;
-        list-style-type: none;
-        margin: 0;
-        padding: 0;
-        overflow: hidden;
-        background-color: #333333;
-  
-}
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="dev">
+  <meta name="description" content="The official website for the Chai Kings">
+  <title>Chai Tales</title>
+  <link rel="icon" href="img.png">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Navbar styling */
+    .navbar {
+      position: sticky;
+      top: 0;
+      background-color: #333;
+      z-index: 50;
+    }
 
-ul li {
-  float: left;
-}
+    .navbar a {
+      color: white;
+      padding: 14px 16px;
+      text-decoration: none;
+      text-transform: uppercase;
+      font-weight: 500;
+      transition: 0.3s;
+    }
 
-ul li a {
-  display: block;
-  color: white;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-}
+    .navbar a:hover {
+      background-color: #111;
+    }
 
-ul li a.active {
-  background-color: #04AA6D;
-}
+    .navbar a.active {
+      background-color: #04AA6D;
+    }
 
-ul li a:hover {
-  background-color: #111111;
-}
-
-        </style>
+    /* Custom underline for "CHAI" */
+    .highlight {
+      position: relative;
+      display: inline-block;
+    }
+    .highlight::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -6px;
+      width: 100%;
+      height: 4px;
+      background-color: #04AA6D;
+      border-radius: 2px;
+    }
+  </style>
 </head>
-<body>
-    <figure>
-        <center><img src="img.jpg.png" width=1800 height=400 alt="chai and buiscuits" title="Brewing Stories, One Cup at a Time!"></center>
-    </figure> 
-    <div class="content">    
-    <header class="container">
-        <h1> <u>welcome to Chai Tales restaurant</u></h1>
-        <nav class="navbar navbar-light bg-light">
-            <ul>
-                <li>
-                    <a href="about.html"> About</a>
-                </li>
-                <li>
-                    <a href="#menu"> our menu</a>
-                </li>
-                <li>
-                    <a href="./hours.html">Store hours</a>
-                </li>
-                <li> 
-                    <a href="contact.html">contact us</a>
-                </li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <article id="menu">
-            <style>
-                table, th, td {
-                  border: 1px solid black;
-                }
-                </style>
-                <table>
-                    <tr>
-                      <th>chai varieties</th>
-                      <th>prices</th>
-                    </tr>
-                    <tr>
-                      <td>Regular chai</td>
-                      <td>₹15</td>
-                    </tr>
-                    <tr>
-                      <td>classic chai</td>
-                      <td>₹30</td>
-                    </tr>
-                    <tr>
-                        <th>large chai</th>
-                        <th>₹45</th>
-                      </tr>
-                      <tr>
-                        <th>ginger chai</th>
-                        <th>₹25</th>
-                      </tr>
-                      <tr>
-                        <th>special chai</th>
-                        <th>₹25</th>
-                      </tr>
-                      <tr>
-                        <th>green tea</th>
-                        <th>₹25</th>
-                      </tr>
-                      <tr>
-                        <th>black tea</th>
-                        <th>₹15</th>
-                      </tr><tr>
-                        <th>lemon tea</th>
-                        <th>₹25</th>
-                      </tr><tr>
-                        <th>boost tea</th>
-                        <th>₹20</th>
-                      </tr><tr>
-                        <th>Filter coffee</th>
-                        <th>₹25</th>
-                      </tr><tr>
-                        <th>black coffee</th>
-                        <th>₹20</th>
-                      </tr><tr>
-                        <th>rosemilk</th>
-                        <th>₹35</th>
-                      </tr><tr>
-                        <th>badam milk</th>
-                        <th>₹35</th>
-                      </tr><tr>
-                        <th>butter buiscuit</th>
-                        <th>₹10</th>
-                      </tr><tr>
-                        <th>samosa</th>
-                        <th>₹15</th>
-                      </tr>
-                    </tbody>
+<body class="bg-white text-gray-800 font-sans">
 
-                  </table>
-                  <br>
-                  <p>
-                    <a href="#"> Back To Top</a>
-                  </p>
-        </article>
-    </main>
-</div> 
-    <hr>
-    <footer>
-        <p> copyright &copy The Classic Chai Kings</p>
-    </footer>
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="max-w-7xl mx-auto flex justify-between items-center px-6">
+      <!-- Logo -->
+      <div class="flex items-center space-x-2 text-white font-bold text-lg py-3">
+        <img src="img.png" alt="logo" class="h-8 w-8">
+        <span>Chai Talès</span>
+      </div>
+
+      <!-- Menu -->
+      <nav class="flex space-x-4">
+        <a href="index.html" class="active">Home</a>
+        <a href="menu.html">Menu</a>
+        <a href="about.html">About Us</a>
+        <a href="contact.html">Contact Us</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="home"
+    class="relative h-screen bg-cover bg-center flex items-center justify-center text-white"
+    style="background-image: url('image.png');">
+    
+    <!-- Overlay -->
+    <div class="absolute inset-0 bg-black/50"></div>
+
+    <!-- Text Content -->
+    <div class="relative z-10 text-center px-4">
+      <p class="text-3xl tracking-widest mb-4 uppercase">Welcome to Chai Kings</p>
+      <h1 class="text-4xl md:text-6xl font-bold leading-snug uppercase">
+        IN THE LAND OF <span class="highlight">CHAI</span> <br>
+        EVERY CUP TELLS A TALE
+      </h1>
+      <a href="menu.html">
+        <button class="mt-8 px-8 py-3 bg-green-600 hover:bg-green-700 rounded font-semibold transition">
+          Explore Menu
+        </button>
+      </a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer id="contact" class="bg-gray-900 text-white py-4 text-center">
+    <p>&copy; 2025 The classic Chai Talès. All Rights Reserved.</p>
+  </footer>
+
 </body>
 </html>
