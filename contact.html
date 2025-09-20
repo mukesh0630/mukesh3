@@ -1,46 +1,160 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="dev">
-    <meta name="description" content="the office website for the chai Tales">
-    <title> The classic chai Tales</title>
-    <link rel="icon" href="img.png">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us - Chai Tales</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+     .navbar {
+      position: sticky;
+      top: 0;
+      background-color: #333;
+      z-index: 50;
+    }
+    .navbar a {
+      color: white;
+      padding: 14px 16px;
+      text-decoration: none;
+      text-transform: uppercase;
+      font-weight: 500;
+      transition: 0.3s;
+    }
+    .navbar a:hover {
+      background-color: #111;
+    }
+    .navbar a.active {
+      background-color: #04AA6D;
+    }
+  </style>
 </head>
-<body>
-    <figure>
-        <center><img src="img.jpg.png" width=1800 height=400 alt="chai and buiscuits" title="Brewing Stories, One Cup at a Time!"></center>
-        <figcaption>
-           <center><strong> Brewing Stories, One Cup at a Time!</strong></center>
-        </figcaption>
-    </figure>
-    <header class="container">
-        <h1> Welcome To Chai Tales Restaurant</h1>
-        <nav class="navbar navbar-light bg-light">
-            <ul>
-                <li>
-                    <a href="#about"> About <abbr title="Chai Tales Restaurant">CT Cafè</abbr></a>
-                </li>
-                <li>
-                    <a href="#menu"> our menu</a>
-                </li>
-                <li>
-                    <a href="./hours.html">Store hours</a>
-                </li>
-                <li> 
-                    <a href="./contact.html">contact us</a>
-                </li>
-            </ul>
-        </nav>
-        
-    </header>
-    <hr>
-    <main>
-    <h1>contact us</h1>
-</main>
+<body class="font-sans">
+    <header class="navbar">
+        <div class="max-w-7xl mx-auto flex justify-between items-center px-6">
+          <div class="flex items-center space-x-2 text-white font-bold text-lg py-3">
+            <img src="img.png" alt="logo" class="h-8 w-8">
+            <span>Chai Talès</span>
+          </div>
+    
+          <nav class="flex space-x-4">
+            <a href="index.html">Home</a>
+            <a href="menu.html">Menu</a>
+            <a href="about.html">About Us</a>
+            <a href="contact.html" class="active">Contact Us</a>
+          </nav>
+        </div>
+      </header>
 
+  <!-- Hero -->
+  <section class="relative bg-cover bg-center h-72" style="background-image: url('chai-bg.jpg');">
+    <div class="absolute inset-0 bg-black bg-opacity-40"></div>
+    <div class="relative flex flex-col items-center justify-center h-full text-white text-center">
+      <h1 class="text-5xl font-extrabold uppercase">Contact</h1>
+      <p class="text-2xl font-semibold mt-2">Get in Touch</p>
+    </div>
+    <!-- Faded background text -->
+    <div class="absolute inset-0 flex justify-center items-center">
+      <h1 class="text-[8rem] md:text-[12rem] font-extrabold text-white opacity-10 uppercase tracking-widest">Contact</h1>
+    </div>
+  </section>
+
+  <!-- Contact Form Section -->
+  <section class="max-w-7xl mx-auto px-6 py-16 grid grid-cols-1 md:grid-cols-2 gap-8">
+    <!-- Left Form -->
+    <div class="bg-white max-w-2xl mx-auto p-8 rounded-2xl shadow-lg">
+        <h2 class="text-center text-lg font-semibold mb-6">For Franchise Enquiry</h2>
+        <form id="franchiseForm" class="space-y-5">
+          
+          <!-- Name -->
+          <div>
+            <label class="block text-gray-700 font-medium mb-1">Name *</label>
+            <input type="text" placeholder="Enter Your Name"
+              class="w-full bg-gray-100 rounded-full px-4 py-3 focus:outline-none focus:ring-2 focus:ring-orange-400" required>
+          </div>
+      
+          <!-- Location -->
+          <div>
+            <label class="block text-gray-700 font-medium mb-1">Location *</label>
+            <input type="text" placeholder="Enter Your Location"
+              class="w-full bg-gray-100 rounded-full px-4 py-3 focus:outline-none focus:ring-2 focus:ring-orange-400" required>
+          </div>
+      
+          <!-- Mobile -->
+          <div>
+            <label class="block text-gray-700 font-medium mb-1">Mobile Number *</label>
+            <input type="tel" placeholder="Enter Mobile Number"
+              class="w-full bg-gray-100 rounded-full px-4 py-3 focus:outline-none focus:ring-2 focus:ring-orange-400" required>
+          </div>
+      
+          <!-- Email -->
+          <div>
+            <label class="block text-gray-700 font-medium mb-1">Email *</label>
+            <input type="email" placeholder="Enter your email"
+              class="w-full bg-gray-100 rounded-full px-4 py-3 focus:outline-none focus:ring-2 focus:ring-orange-400" required>
+          </div>
+      
+          <!-- Date -->
+          <div>
+            <label class="block text-gray-700 font-medium mb-1">Preferred Date to reach you</label>
+            <input type="date"
+              class="w-full bg-gray-100 rounded-full px-4 py-3 focus:outline-none focus:ring-2 focus:ring-orange-400">
+          </div>
+      
+          <!-- Time -->
+          <div>
+            <label class="block text-gray-700 font-medium mb-1">Preferred time to reach you</label>
+            <input type="time"
+              class="w-full bg-gray-100 rounded-full px-4 py-3 focus:outline-none focus:ring-2 focus:ring-orange-400">
+          </div>
+      
+          <!-- Submit Button -->
+          <div class="text-center">
+            <button type="submit"
+              class="w-full bg-orange-500 text-white py-3 rounded-full font-semibold hover:bg-orange-600 transition">
+              Submit
+            </button>
+          </div>
+        </form>
+      </div>
+      
+      <!-- Alert Modal -->
+      <div id="alertModal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden">
+        <div class="bg-white rounded-xl p-6 max-w-sm text-center shadow-lg">
+          <h3 class="text-lg font-semibold mb-3">Response Submitted ✅</h3>
+          <p class="text-gray-600 mb-5">Your response is submitted. You will receive a mail regarding this.</p>
+          <button onclick="closeModal()" class="bg-orange-500 text-white px-6 py-2 rounded-full hover:bg-orange-600">
+            OK
+          </button>
+        </div>
+      </div>
+      
+      <script>
+        const form = document.getElementById("franchiseForm");
+        const modal = document.getElementById("alertModal");
+      
+        form.addEventListener("submit", function (e) {
+          e.preventDefault(); // prevent actual form submit
+          modal.classList.remove("hidden"); // show modal
+        });
+      
+        function closeModal() {
+          modal.classList.add("hidden"); // hide modal
+          form.reset(); // optional: reset form after closing
+        }
+      </script>      
+    <!-- Right Info -->
+    <div class="bg-green-700 text-white p-8 rounded-lg shadow flex flex-col justify-center">
+      <h3 class="text-xl font-bold mb-4">Head Office</h3>
+      <p class="mb-6">
+        7, 7th West Cross St, Shenoy Nagar West, Bharathi Puram, Annanagar East, Chennai, Tamil Nadu 600030
+
+      <h3 class="text-xl font-bold mb-4">Email</h3>
+      <p class="mb-6">info@chaitales.com</p>
+
+      <h3 class="text-xl font-bold mb-4">Phone</h3>
+      <p>+91 98765 43210</p>
+    </div>
+  </section>
 
 </body>
 </html>
